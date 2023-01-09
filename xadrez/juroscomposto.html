@@ -1,0 +1,30 @@
+<html>
+<head>
+	<title>Juros Composto</title>
+	<script src="geral.js"></script>
+	<link rel="stylesheet" type="text/css" href="geral.css"></link>
+	<meta http-equiv="Content-Script-Type" content="text/javascript">
+</head>
+<body>
+	<table border="0">
+		<tr>
+			<td>Capital Inicial: </td>
+			<td><input type="text" id="ci" onKeyUp="javascript:somente_numero(this);"/></td>
+		</tr>
+		<tr>
+			<td>Juros: </td>
+			<td><input type="text" id="ju" onKeyUp="javascript:somente_numero(this);"/></td>
+		</tr>
+		<tr>
+			<td>Tempo(em meses): </td>
+			<td><input type="text" id="temp" onKeyUp="javascript:somente_numero(this);"/></td>
+		</tr>
+		<tr>
+			<td><input type="button" title="Calcular" value="Calcular" onclick="javascript:calcula();"/></td>
+			<td><a href="Calculo.html" class="links">Voltar</a>
+		</tr>
+	</table>
+	<div id="result" class="divjuros" border="1">
+	</div>
+</body>
+</html>

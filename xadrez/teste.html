@@ -1,0 +1,32 @@
+<html>
+<head>
+	<title>Titulo aqui</title>
+	<link rel="stylesheet" type="text/css" href="teste.css" />
+	<script type="text/javascript">
+		function aparece(){
+			var xmlhttp = new XMLHttpRequest();
+			xmlhttp.onreadystatechange=function()
+			{
+				if (xmlhttp.readyState==4)
+				{
+					document.getElementById("menu1").innerHTML=xmlhttp.responseText;
+				}
+			}
+			xmlhttp.open("GET","conteudo.txt",true);
+			xmlhttp.send();
+		}
+	</script>
+</head>
+<body>
+	<div align="center" class="principal">
+		<div class="menu" border="1">
+			
+				<span onclick="aparece()">conteudo</span>
+				
+		</div>
+		<div class="menu" id="menu1" border="1">
+			
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,237 @@
+<html>
+<head>
+<title>Xadrez</title>
+<link rel="stylesheet" type="text/css" href="style.css"></link>
+<script type="text/javascript" src="peao.js"></script>
+<script type="text/javascript" src="torre.js"></script>
+<script type="text/javascript" src="bispo.js"></script>
+<script type="text/javascript" src="rainha.js"></script>
+<script type="text/javascript" src="cavalo.js"></script>
+</head>
+<body>
+	<h2 align="center">Xadrez</h2>
+	<br>
+	<input type="hidden" id="selecionado" value="0">
+	<input type="hidden" id="selecionado_mover" value="0">
+	<input type="hidden" id="peca" value="">
+	<table align="center" border="1" width="500" height="500">
+	
+		<tr border="1">
+			<td class="preto torre_p_2 peca_p" border="1" id="1" onclick="javascript:casas_torre(this);">
+				
+			</td>
+			<td border="1" id="2" class="cavalo_p_1 peca_p" onclick="javascript:casas_cavalo(this);"> 
+				
+			</td>
+			<td class="preto bispo_p_2 peca_p" border="1" id="3" onclick="javascript:casas_bispo(this);">
+				
+			</td>
+			<td border="1" id="4" class="rei_p_1 peca_p">
+				
+			</td>
+			<td class="preto rainha_p_2 peca_p" border="1" id="5" onclick="javascript:casas_rainha(this);">
+				
+			</td>
+			<td border="1" id="6" class="bispo_p_1 peca_p" onclick="javascript:casas_bispo(this);">
+				
+			</td>
+			<td class="preto cavalo_p_2 peca_p" border="1" id="7" onclick="javascript:casas_cavalo(this);">
+				
+			</td>
+			<td border="1" id="8" class="torre_p_1 peca_p" onclick="javascript:casas_torre(this);">
+				
+			</td>
+		</tr>
+		
+		<tr>
+			<td class="peao_p_1 peca_p" id="9" onclick="javascript:casas_peao(this);">
+				
+			</td>
+			<td class="preto peao_p_2 peca_p" id="10" onclick="javascript:casas_peao(this);">
+				
+			</td>
+			<td class="peao_p_1 peca_p" id="11" onclick="javascript:casas_peao(this);">
+				
+			</td>
+			<td class="preto peao_p_2 peca_p" id="12" onclick="javascript:casas_peao(this);">
+				
+			</td>
+			<td class="peao_p_1 peca_p" id="13" onclick="javascript:casas_peao(this);">
+				
+			</td>
+			<td class="preto peao_p_2 peca_p" id="14" onclick="javascript:casas_peao(this);">
+				
+			</td>
+			<td class="peao_p_1 peca_p" id="15" onclick="javascript:casas_peao(this);">
+				
+			</td>
+			<td class="preto peao_p_2 peca_p" id="16" onclick="javascript:casas_peao(this);">
+				
+			</td>
+		</tr>
+		
+		<tr border="1">
+			<td class="preto" border="1" id="17" onclick="javascript:move(this);">
+				
+			</td>
+			<td border="1" id="18" onclick="javascript:move(this);"> 
+				
+			</td>
+			<td class="preto" border="1" id="19" onclick="javascript:move(this);">
+				
+			</td>
+			<td border="1" id="20" onclick="javascript:move(this);">
+				
+			</td>
+			<td class="preto" border="1" id="21" onclick="javascript:move(this);">
+				
+			</td>
+			<td border="1" id="22" onclick="javascript:move(this);">
+				
+			</td>
+			<td class="preto" border="1" id="23" onclick="javascript:move(this);">
+				
+			</td>
+			<td border="1" id="24" onclick="javascript:move(this);">
+				
+			</td>
+		</tr>
+		
+		<tr>
+			<td id="25" onclick="javascript:move(this);">
+				
+			</td>
+			<td class="preto" id="26" onclick="javascript:move(this);">
+				
+			</td>
+			<td id="27" onclick="javascript:move(this);">
+				
+			</td>
+			<td class="preto" id="28" onclick="javascript:move(this);">
+				
+			</td>
+			<td id="29" onclick="javascript:move(this);">
+				
+			</td>
+			<td class="preto" id="30" onclick="javascript:move(this);">
+				
+			</td>
+			<td id="31" onclick="javascript:move(this);">
+				
+			</td>
+			<td class="preto" id="32" onclick="javascript:move(this);">
+				
+			</td>
+		</tr>
+		
+		<tr border="1">
+			<td class="preto" border="1" id="33" onclick="javascript:move(this);">
+				
+			</td>
+			<td border="1" id="34" onclick="javascript:move(this);"> 
+				
+			</td>
+			<td class="preto" border="1" id="35" onclick="javascript:move(this);">
+				
+			</td>
+			<td border="1" id="36" onclick="javascript:move(this);">
+				
+			</td>
+			<td class="preto" border="1" id="37" onclick="javascript:move(this);">
+				
+			</td>
+			<td border="1" id="38" onclick="javascript:move(this);">
+				
+			</td>
+			<td class="preto" border="1" id="39" onclick="javascript:move(this);">
+				
+			</td>
+			<td border="1" id="40" onclick="javascript:move(this);">
+				
+			</td>
+		</tr>
+		
+		<tr>
+			<td id="41" onclick="javascript:move(this);">
+				
+			</td>
+			<td class="preto" id="42" onclick="javascript:move(this);">
+				
+			</td>
+			<td id="43" onclick="javascript:move(this);">
+				
+			</td>
+			<td class="preto" id="44" onclick="javascript:move(this);">
+				
+			</td>
+			<td id="45" onclick="javascript:move(this);">
+				
+			</td>
+			<td class="preto" id="46" onclick="javascript:move(this);">
+				
+			</td>
+			<td id="47" onclick="javascript:move(this);">
+				
+			</td>
+			<td class="preto" id="48" onclick="javascript:move(this);">
+				
+			</td>
+		</tr>
+		
+		<tr border="1">
+			<td class="preto peao_b_2 peca_b" border="1" id="49" onclick="javascript:casas_peao(this);">
+				
+			</td>
+			<td border="1" class="peao_b_1 peca_b" id="50" onclick="javascript:casas_peao(this);"> 
+				
+			</td>
+			<td class="preto peao_b_2 peca_b" border="1" id="51" onclick="javascript:casas_peao(this);">
+				
+			</td>
+			<td border="1" class="peao_b_1 peca_b" id="52" onclick="javascript:casas_peao(this);">
+				
+			</td>
+			<td class="preto peao_b_2 peca_b" border="1" id="53" onclick="javascript:casas_peao(this);">
+				
+			</td>
+			<td border="1" class="peao_b_1 peca_b" id="54" onclick="javascript:casas_peao(this);">
+				
+			</td>
+			<td class="preto peao_b_2 peca_b" border="1" id="55" onclick="javascript:casas_peao(this);">
+				
+			</td>
+			<td border="1" class="peao_b_1 peca_b" id="56" onclick="javascript:casas_peao(this);">
+				
+			</td>
+		</tr>
+		
+		<tr>
+			<td id="57" class="torre_b_1 peca_b" onclick="javascript:casas_torre(this);">
+				
+			</td>
+			<td class="preto cavalo_b_2 peca_b" id="58" onclick="javascript:casas_cavalo(this);">
+				
+			</td>
+			<td id="59" class="bispo_b_1 peca_b" onclick="javascript:casas_bispo(this);">
+				
+			</td>
+			<td class="preto rei_b_2 peca_b" id="60">
+				
+			</td>
+			<td id="61" class="rainha_b_1 peca_b" onclick="javascript:casas_rainha(this);">
+				
+			</td>
+			<td class="preto bispo_b_2 peca_b" id="62" onclick="javascript:casas_bispo(this);">
+				
+			</td>
+			<td id="63" class="cavalo_b_1 peca_b" onclick="javascript:casas_cavalo(this);">
+				
+			</td>
+			<td class="preto torre_b_2 peca_b" id="64" onclick="javascript:casas_torre(this);">
+				
+			</td>
+		</tr>
+		
+	</table>
+</body>
+</html>
